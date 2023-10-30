@@ -8,8 +8,11 @@ readme = "README.md"
 
 requires-python = ">=3.10"
 
-
-dependencies = ["numpy>=1.2,<=1.26.1"]
+dependencies = [
+  "numpy>=1.2,<=1.26.1",
+  "holobench>=3.6.0,<=3.6.0",
+  "mortgage>=1.0.5,<=1.0.5",
+]
 
 [project.optional-dependencies]
 test = [
