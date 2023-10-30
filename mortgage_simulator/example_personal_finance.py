@@ -1,7 +1,7 @@
 import bencher as bch
 
-from example_investment import Investment
-from example_mortgage import Mortgage
+from mortgage_simulator.example_investment import Investment
+from mortgage_simulator.example_mortgage import Mortgage
 
 
 class PersonalFinances(bch.ParametrizedSweep):

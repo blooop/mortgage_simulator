@@ -2,7 +2,7 @@ import holoviews as hv
 import panel as pn
 from mortgage import Loan
 import bencher as bch
-from example_investment import Investment
+from mortgage_simulator.example_investment import Investment
 
 
 class EconomicClimate(bch.ParametrizedSweep):
