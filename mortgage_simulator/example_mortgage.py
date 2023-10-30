@@ -66,5 +66,6 @@ if __name__ == "__main__":
     bench.report.append(res.to_holomap())
 
     bench.report.append_tab(Mortgage().to_dynamic_map(name="Mortgage Calculator"))
+    bench.report.save_index()
 
     bench.report.show()
