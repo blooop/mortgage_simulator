@@ -4,6 +4,9 @@ import bencher as bch
 
 
 class Mortgage(bch.ParametrizedSweep):
+    """A class that calculates the the interest value etc of a mortgage"""
+
+    #INPUT VARS
     inflation = bch.FloatSweep(default=8, bounds=[0.5, 15], units="%", samples=5)
     principal = bch.FloatSweep(default=200000, bounds=(0, 1000000), units="$")
     interest = bch.FloatSweep(default=6, bounds=(1, 10), samples=5, units="%")
@@ -51,21 +54,11 @@ if __name__ == "__main__":
 
     res = bench.plot_sweep(
         "Mortgage",
+        description="A plot of how interest changes the value of a mortgage",
         input_vars=[Mortgage.param.interest],
-        result_vars=[
-            Mortgage.param.installment_balance,
-            Mortgage.param.installment_principal,
-            Mortgage.param.hmap,
-        ],
+        result_vars=[Mortgage.param.hmap],
     )
 
-    bench.report.append(res.to_curve())
-
-    bench.report.append(res.to(hv.Table).opts(width=1000))
-
     bench.report.append(res.to_holomap())
-
-    bench.report.append_tab(Mortgage().to_dynamic_map(name="Mortgage Calculator"))
     bench.report.save_index()
-
     bench.report.show()
