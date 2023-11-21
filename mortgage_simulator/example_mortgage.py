@@ -6,7 +6,7 @@ import bencher as bch
 class Mortgage(bch.ParametrizedSweep):
     """A class that calculates the the interest value etc of a mortgage"""
 
-    #INPUT VARS
+    # INPUT VARS
     inflation = bch.FloatSweep(default=8, bounds=[0.5, 15], units="%", samples=5)
     principal = bch.FloatSweep(default=200000, bounds=(0, 1000000), units="$")
     interest = bch.FloatSweep(default=6, bounds=(1, 10), samples=5, units="%")
