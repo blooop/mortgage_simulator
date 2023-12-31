@@ -57,15 +57,10 @@ if __name__ == "__main__":
             Mortgage.param.installment_principal,
             Mortgage.param.hmap,
         ],
-        plot=False,
     )
 
-    bench.report.append(res.to_curve())
-
     bench.report.append(res.to(hv.Table).opts(width=1000))
-
     bench.report.append(res.to_holomap())
-
-    bench.report.append_tab(Mortgage().to_dynamic_map(name="Mortgage Calculator"))
+    # bench.report.append_tab(Mortgage().to_dynamic_map(name="Mortgage Calculator"))
 
     bench.report.show()
