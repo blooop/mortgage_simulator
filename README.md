@@ -6,4 +6,6 @@ This is a toy problem that was used as an example to test the workflow of using 
 
 Results:
 
+## Continuous Integration Status
+
 https://blooop.github.io/mortgage_simulator/
