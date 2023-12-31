@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 dependencies = [
   "numpy>=1.2,<=1.26.2",
   "holobench>=0.3.6,<=0.4.0",
-  "mortgage>=1.0.5,<=1.0.5",
+  "mortgage>=1.2.3,<=1.2.3",
 ]
 
 [project.optional-dependencies]
